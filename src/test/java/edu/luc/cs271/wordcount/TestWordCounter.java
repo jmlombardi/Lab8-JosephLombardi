@@ -2,11 +2,10 @@ package edu.luc.cs271.wordcount;
 
 import static org.junit.Assert.*;
 
+import java.util.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-
-import java.util.*;
 
 public class TestWordCounter {
 
@@ -15,6 +14,7 @@ public class TestWordCounter {
   // TODO declare a reference to the SUT (system under test), i.e., WordCounter
 
   WordCounter fixture;
+
   @Before
   public void setUp() {
     // TODO create the SUT instance
@@ -52,10 +52,10 @@ public class TestWordCounter {
     fixture.countWords(iterator);
     Integer DataCount = 2;
 
-    //assertEquals(fixture.getCount("Data"), DataCount);
-    //assertEquals(fixture.getCount("Data"), 2);
-    //assertEquals(fixture.getCount("Are"), 1);
-    //assertEquals(fixture.getCount("Fun"), 1);
+    // assertEquals(fixture.getCount("Data"), DataCount);
+    // assertEquals(fixture.getCount("Data"), 2);
+    // assertEquals(fixture.getCount("Are"), 1);
+    // assertEquals(fixture.getCount("Fun"), 1);
     assertEquals(fixture.getCount("eggs"), -1);
     assertEquals(fixture.getCount("bacon"), -1);
   }
